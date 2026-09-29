@@ -269,6 +269,10 @@ body {
   color: #666;
 }
 
+.auth-switch span:hover {
+  cursor: pointer;
+}
+
 .auth-link {
   color: #007bff;
   text-decoration: none;
