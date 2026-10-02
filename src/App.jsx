@@ -2,6 +2,8 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Checkout from "./pages/Checkout";
 import Auth from "./pages/Auth";
+import ProductDetails from "./pages/ProductDetails";
+
 import NavBar from "./components/Navbar";
 
 import "./App.css";
@@ -16,6 +18,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/auth" element={<Auth />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="/products/:id" element={<ProductDetails />} />
         </Routes>
       </div>
     </AuthProvider>
