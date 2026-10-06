@@ -8,19 +8,22 @@ import NavBar from "./components/Navbar";
 
 import "./App.css";
 import AuthProvider from "./context/AuthContext";
+import CartProvider from "./context/CartContext";
 
 function App() {
   return (
     <AuthProvider>
-      <div className="app">
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/auth" element={<Auth />} />
-          <Route path="/checkout" element={<Checkout />} />
-          <Route path="/products/:id" element={<ProductDetails />} />
-        </Routes>
-      </div>
+      <CartProvider>
+        <div className="app">
+          <NavBar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/auth" element={<Auth />} />
+            <Route path="/checkout" element={<Checkout />} />
+            <Route path="/products/:id" element={<ProductDetails />} />
+          </Routes>
+        </div>
+      </CartProvider>
     </AuthProvider>
   );
 }
